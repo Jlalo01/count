@@ -22,7 +22,8 @@ function App() {
     setFin(days+":"+hours+":"+minutes+":"+seconds);
   },1000);
 
-  async function handleClick(){
+  async function handleClick(e){
+    e.preventDefault();
     if (bcrypt.compareSync(pass, hash)){setShow(true);}
     else{setFin("NO");}
     console.log(pass);
@@ -34,11 +35,11 @@ function App() {
   else{
     return(
       <div className="App">
-        <form>
+        <form onSubmit={handleClick}>
           <label className="password">Password: </label>
           <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} />
+          <input type="submit">Enter</input>
         </form>
-        <button onClick={handleClick}>Enter</button>
       </div>
     );
   }
