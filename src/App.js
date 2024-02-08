@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import './App.css';
 
 function App() {
-  const on = "2024-02-8 09:06:00";
+  const on = "February 8, 2024";
   const hash = '$2b$13$7K43NXoFtY.ZPzhaBTSTEe0CgLcXkQQ7hxzL1N9DOdRIJKoXjMnja';
   const [pass, setPass] = useState("");
   const [fin, setFin] = useState("");
